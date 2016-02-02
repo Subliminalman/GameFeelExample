@@ -16,6 +16,8 @@ public class Coin : MonoBehaviour {
 		spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 	
+	
+	//Respawn the coin after a set amount of time after being collided with
 	IEnumerator WaitAndRespawn () {
 
 		yield return new WaitForSeconds (10f);
@@ -34,6 +36,7 @@ public class Coin : MonoBehaviour {
 
 	}
 
+	//Check to see if we collided with the player to pick up the coin.
 	void OnCollisionEnter (Collision _col) {
 		if (_col.collider.CompareTag("Player")) {
 			if(pickupClip) {

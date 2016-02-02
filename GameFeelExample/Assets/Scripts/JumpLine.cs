@@ -4,12 +4,13 @@ using System.Collections;
 public class JumpLine : MonoBehaviour {
 	public LineRenderer jumpLine;
 
-	Vector3 [] jumpVectors;
+	Vector3 [] jumpVectors; //Points on the jumpLine
 	
-	public Player player;
+	public Player player; //Reference to the player
 
-	// Use this for initialization
+	//Setup the jumpLine's width, each point on the line, and the amount of points
 	void Start () {
+		
 		jumpLine.SetWidth (0.1f, 0.1f);
 		jumpVectors = new Vector3[100];
 
@@ -21,7 +22,7 @@ public class JumpLine : MonoBehaviour {
 		jumpLine.SetVertexCount(100);
 	}
 	
-	// Update is called once per frame
+	//Every frame set the array of points based on time and y position of the player
 	void Update () {
 		jumpVectors[jumpVectors.Length - 1] = new Vector3 (0f, player.transform.position.y, 0f);
 

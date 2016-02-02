@@ -2,13 +2,13 @@
 using System.Collections;
 
 public class RunLine : MonoBehaviour {
-
 	public LineRenderer accelerationLine;
-	Vector3 [] accelerationVectors;
-
-	public Player player;
 	
-	// Use this for initialization
+	Vector3 [] accelerationVectors; //Points on the runLine
+	
+	public Player player; //Reference to player
+	
+	// Setup the runLine's width, each point on the line, and the amount of points
 	void Start () {
 		accelerationLine.SetWidth (0.1f, 0.1f);
 		accelerationVectors = new Vector3[100];
@@ -20,7 +20,7 @@ public class RunLine : MonoBehaviour {
 		accelerationLine.SetVertexCount(100);
 	}
 	
-	// Update is called once per frame
+	//Every frame set the array of points based on time and the player direction of the player
 	void Update () {	
 
 		if (player == null) {
