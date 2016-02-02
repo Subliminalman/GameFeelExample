@@ -11,3 +11,5 @@ Cat Character (Biscuit) art by Shandiin Woodward
 Platformer art by Kenney Game Assets http://opengameart.org/content/platformer-pack-redux-360-assets
 
 Gameboy Platformer Art by LittleSadNerd  http://opengameart.org/content/gameboy-platformer-art
+
+Sound Effects from http://www.bfxr.net/
